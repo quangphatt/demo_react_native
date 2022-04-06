@@ -8,23 +8,16 @@ class Profile extends Component {
     this.state = {};
   }
 
-  componentWillUnmount() {
-    console.log('Profile will unmount');
-  }
-
-  // logOut=()=>{
-  //   this.props.navigation.navigate('Login');
-  // }
-
   render() {
     return (
       <View>
-        
-          <Text>Hello</Text>
-          <AuthContext.Consumer>{(context)=>(<TouchableOpacity onPress={context.logOut}>
-          <Text>Log Out</Text>
-        </TouchableOpacity>)}
-          
+        <Text>Hello</Text>
+        <AuthContext.Consumer>
+          {context => (
+            <TouchableOpacity onPress={context.logOut}>
+              <Text>Log Out</Text>
+            </TouchableOpacity>
+          )}
         </AuthContext.Consumer>
       </View>
     );

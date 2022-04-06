@@ -15,21 +15,10 @@ class AppNav extends Component {
   }
 
   render() {
-    
-
     return (
-      // <NavigationContainer>
-      //   <Stack.Navigator
-      //     screenOptions={{
-      //       headerShown: false,
-      //     }}>
-      //     <Stack.Screen name="Login" component={Login} />
-      //     <Stack.Screen name="Home" component={Home} />
-      //   </Stack.Navigator>
-      // </NavigationContainer>
       <AuthContext.Consumer>
         {context =>
-          context.isLogIn ? (
+          context.isLogin ? (
             <NavigationContainer>
               <Stack.Navigator
                 screenOptions={{

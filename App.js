@@ -8,10 +8,10 @@ class App extends Component {
     this.state = {
       isLogin: false,
       logIn: () => {
-        this.setState({isLogIn: true});
+        this.setState({isLogin: true});
       },
       logOut: () => {
-        this.setState({isLogIn: false});
+        this.setState({isLogin: false});
       },
     };
   }

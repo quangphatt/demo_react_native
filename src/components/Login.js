@@ -24,21 +24,11 @@ class Login extends Component {
     };
   }
 
-  componentWillUnmount() {
-    console.log('Login will unmount');
-  }
-
   showPass = () => {
     this.setState({
       showPassword: !this.state.showPassword,
     });
   };
-
-  // logIn = () => {
-  //   if (this.state.username !== '' && this.state.password !== '') {
-  //     this.props.navigation.navigate('Home', {username: this.state.username});
-  //   }
-  // };
 
   render() {
     return (
@@ -102,7 +92,7 @@ class Login extends Component {
             {context => (
               <TouchableOpacity
                 style={styles.btn_signin}
-                onPress={context => context.logIn}>
+                onPress={context.logIn}>
                 <Text style={styles.btn_text}>Sign In</Text>
               </TouchableOpacity>
             )}
