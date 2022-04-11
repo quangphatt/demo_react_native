@@ -113,7 +113,7 @@ class Login extends Component {
             <Text
               style={{
                 position: 'absolute',
-                color: '#94abb3',
+                color: '#000',
                 backgroundColor: 'white',
                 padding: 10,
                 zIndex: 1,

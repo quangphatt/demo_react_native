@@ -1,17 +1,18 @@
-import React, {Component} from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
+import React, { Component } from 'react';
+import { View, Text, TouchableOpacity } from 'react-native';
 import {AuthContext} from '../contexts/AuthContext';
 
-class Profile extends Component {
+class Others extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+    };
   }
 
   render() {
     return (
       <View>
-        <Text>Hello</Text>
+        <Text style={{color: '#000'}}> Others </Text>
         <AuthContext.Consumer>
           {context => (
             <TouchableOpacity onPress={context.logOut}>
@@ -24,4 +25,4 @@ class Profile extends Component {
   }
 }
 
-export default Profile;
+export default Others;

@@ -5,7 +5,7 @@ class About extends Component {
   render() {
     return (
       <View>
-        <Text>About</Text>
+        <Text style={{color: '#000'}}>About</Text>
       </View>
     )
   }
