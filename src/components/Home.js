@@ -2,20 +2,22 @@ import React, {Component} from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {createDrawerNavigator} from '@react-navigation/drawer';
 
 import Feed from './Feed';
 import Notifycation from './Notifycation';
 import Setting from './Setting';
 import Profile from './Profile';
+import About from './About';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
 const Tab = createBottomTabNavigator();
+const Drawer = createDrawerNavigator();
 
-class Home extends Component {
+class HomeScreen extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-    };
+    this.state = {};
   }
 
   render() {
@@ -81,6 +83,26 @@ class Home extends Component {
           }}
         />
       </Tab.Navigator>
+    );
+  }
+}
+
+class Home extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  render() {
+    return (
+      <Drawer.Navigator
+        initialRouteName="Home"
+        screenOptions={{
+          headerShown: false,
+        }}>
+        <Drawer.Screen name="Home" component={HomeScreen} />
+        <Drawer.Screen name="About" component={About} />
+      </Drawer.Navigator>
     );
   }
 }

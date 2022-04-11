@@ -24,7 +24,7 @@ class AppNav extends Component {
                 screenOptions={{
                   headerShown: false,
                 }}>
-                <Stack.Screen name="Home" component={Home} />
+                <Stack.Screen name="HomeScreen" component={Home} />
               </Stack.Navigator>
             </NavigationContainer>
           ) : (
