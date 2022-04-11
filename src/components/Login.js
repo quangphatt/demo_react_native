@@ -14,6 +14,9 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
 const Tab = createBottomTabNavigator();
 
+const screenHeight=Dimensions.get('window').height;
+const screenWidth=Dimensions.get('window').witdh;
+
 class Login extends Component {
   constructor(props) {
     super(props);
@@ -45,6 +48,7 @@ class Login extends Component {
             <TextInput
               style={styles.text_input}
               placeholder="Email"
+              placeholderTextColor="#94abb3"
               value={this.state.username}
               onChangeText={newUsername => {
                 this.setState({
@@ -61,6 +65,7 @@ class Login extends Component {
             <TextInput
               style={styles.text_input}
               placeholder="Password"
+              placeholderTextColor="#94abb3"
               secureTextEntry={!this.state.showPassword}
               value={this.state.password}
               onChangeText={newPass => {
@@ -81,7 +86,7 @@ class Login extends Component {
           </View>
 
           <TouchableOpacity style={styles.forgot_pass_wrapper}>
-            <Text style={{fontSize: 12, color: 'black', right: 50}}>
+            <Text style={{fontSize: 12, color: 'black', right: "12%"}}>
               Forgot Password?
             </Text>
           </TouchableOpacity>
@@ -108,6 +113,7 @@ class Login extends Component {
             <Text
               style={{
                 position: 'absolute',
+                color: '#94abb3',
                 backgroundColor: 'white',
                 padding: 10,
                 zIndex: 1,
@@ -139,7 +145,7 @@ class Login extends Component {
 const styles = StyleSheet.create({
   login_wrapper: {
     backgroundColor: 'white',
-    height: Dimensions.get('window').height,
+    height: screenHeight,
   },
   logo_wrapper: {
     alignItems: 'center',
@@ -160,7 +166,7 @@ const styles = StyleSheet.create({
   },
   icon_wrapper: {
     position: 'absolute',
-    right: 60,
+    right: "15%",
   },
   icon: {
     height: 15,
@@ -168,15 +174,13 @@ const styles = StyleSheet.create({
     color: 'black',
   },
   text_input: {
-    width: 320,
+    width: "76%",
     fontSize: 14,
     color: 'black',
     borderStyle: 'solid',
     borderWidth: 1,
     borderRadius: 5,
     borderColor: '#94abb3',
-    marginLeft: 30,
-    marginRight: 30,
     marginTop: 7,
     marginBottom: 7,
     padding: 5,
@@ -192,7 +196,7 @@ const styles = StyleSheet.create({
   },
   btn_signin: {
     height: 45,
-    width: 320,
+    width: "76%",
     borderRadius: 5,
     backgroundColor: '#1C75BC',
     alignItems: 'center',
@@ -202,7 +206,7 @@ const styles = StyleSheet.create({
   },
   btn_scan_qr: {
     height: 45,
-    width: 320,
+    width: "76%",
     borderRadius: 5,
     borderStyle: 'solid',
     borderColor: '#1C75BC',
@@ -214,7 +218,7 @@ const styles = StyleSheet.create({
   },
   btn_signin_google: {
     height: 45,
-    width: 320,
+    width: "76%",
     flexDirection: 'row',
     borderRadius: 5,
     backgroundColor: '#D04A4A',
