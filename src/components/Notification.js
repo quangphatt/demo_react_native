@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 
-class Notifycation extends Component {
+class Notification extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -17,4 +17,4 @@ class Notifycation extends Component {
   }
 }
 
-export default Notifycation;
+export default Notification;
