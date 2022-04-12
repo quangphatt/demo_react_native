@@ -11,7 +11,7 @@ class Feed extends Component {
   render() {
     return (
       <View>
-        <Text> Feed </Text>
+        <Text style={{color:'#000'}}> Feed </Text>
       </View>
     );
   }

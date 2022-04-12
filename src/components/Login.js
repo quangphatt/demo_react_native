@@ -14,8 +14,8 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
 const Tab = createBottomTabNavigator();
 
-const screenHeight=Dimensions.get('window').height;
-const screenWidth=Dimensions.get('window').witdh;
+const screenHeight = Dimensions.get('window').height;
+const screenWidth = Dimensions.get('window').witdh;
 
 class Login extends Component {
   constructor(props) {
@@ -77,16 +77,15 @@ class Login extends Component {
             <TouchableOpacity
               style={styles.icon_wrapper}
               onPress={this.showPass}>
-              {this.state.showPassword ? (
-                <FontAwesome5 style={styles.icon} name={'eye-slash'} />
-              ) : (
-                <FontAwesome5 style={styles.icon} name={'eye'} />
-              )}
+              <FontAwesome5
+                style={styles.icon}
+                name={this.state.showPassword ? 'eye-slash' : 'eye'}
+              />
             </TouchableOpacity>
           </View>
 
           <TouchableOpacity style={styles.forgot_pass_wrapper}>
-            <Text style={{fontSize: 12, color: 'black', right: "12%"}}>
+            <Text style={{fontSize: 12, color: 'black', right: '12%'}}>
               Forgot Password?
             </Text>
           </TouchableOpacity>
@@ -113,7 +112,7 @@ class Login extends Component {
             <Text
               style={{
                 position: 'absolute',
-                color: '#94abb3',
+                color: '#000',
                 backgroundColor: 'white',
                 padding: 10,
                 zIndex: 1,
@@ -166,7 +165,7 @@ const styles = StyleSheet.create({
   },
   icon_wrapper: {
     position: 'absolute',
-    right: "15%",
+    right: '15%',
   },
   icon: {
     height: 15,
@@ -174,7 +173,7 @@ const styles = StyleSheet.create({
     color: 'black',
   },
   text_input: {
-    width: "76%",
+    width: '76%',
     fontSize: 14,
     color: 'black',
     borderStyle: 'solid',
@@ -196,7 +195,7 @@ const styles = StyleSheet.create({
   },
   btn_signin: {
     height: 45,
-    width: "76%",
+    width: '76%',
     borderRadius: 5,
     backgroundColor: '#1C75BC',
     alignItems: 'center',
@@ -206,7 +205,7 @@ const styles = StyleSheet.create({
   },
   btn_scan_qr: {
     height: 45,
-    width: "76%",
+    width: '76%',
     borderRadius: 5,
     borderStyle: 'solid',
     borderColor: '#1C75BC',
@@ -218,7 +217,7 @@ const styles = StyleSheet.create({
   },
   btn_signin_google: {
     height: 45,
-    width: "76%",
+    width: '76%',
     flexDirection: 'row',
     borderRadius: 5,
     backgroundColor: '#D04A4A',
