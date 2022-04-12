@@ -11,14 +11,7 @@ class Profile extends Component {
   render() {
     return (
       <View>
-        <Text>Hello</Text>
-        <AuthContext.Consumer>
-          {context => (
-            <TouchableOpacity onPress={context.logOut}>
-              <Text style={{color: 'red'}}>Log Out</Text>
-            </TouchableOpacity>
-          )}
-        </AuthContext.Consumer>
+        <Text style={{color:'#000'}}>Profile</Text>
       </View>
     );
   }

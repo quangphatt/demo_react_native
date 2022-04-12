@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 
-class Others extends Component {
+class Message extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -11,10 +11,10 @@ class Others extends Component {
   render() {
     return (
       <View>
-        <Text style={{color:'#000'}}> Others </Text>
+        <Text style={{color: '#000'}}> Message </Text>
       </View>
     );
   }
 }
 
-export default Others;
+export default Message;

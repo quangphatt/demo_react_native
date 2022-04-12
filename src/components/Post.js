@@ -11,7 +11,7 @@ class Post extends Component {
   render() {
     return (
       <View>
-        <Text style={{color:'black'}}> Post </Text>
+        <Text style={{color:'#000'}}> Post </Text>
       </View>
     );
   }
