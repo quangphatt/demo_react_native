@@ -11,7 +11,7 @@ class Notifycation extends Component {
   render() {
     return (
       <View>
-        <Text style={{color:'#000'}}> Notification </Text>
+        <Text style={{color: '#000'}}> Notification </Text>
       </View>
     );
   }
