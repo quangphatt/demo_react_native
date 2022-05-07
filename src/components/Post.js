@@ -14,7 +14,7 @@ export class PostModal extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showModal: true,
+      showModal: false,
     };
   }
 

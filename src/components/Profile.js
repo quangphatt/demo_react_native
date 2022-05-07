@@ -10,9 +10,13 @@ class Profile extends Component {
 
   render() {
     return (
-      <View>
-        <Text style={{color:'#000'}}>Profile</Text>
-      </View>
+
+       <AuthContext.Consumer>
+         {/* {context=>(<View>
+           <Text>{context.getUserInfo.result.data.result.name || "error"}</Text>
+         </View>)} */}
+         {context=>{context.getUserInfo();console.log(context.userInfo)}}
+       </AuthContext.Consumer>
     );
   }
 }
